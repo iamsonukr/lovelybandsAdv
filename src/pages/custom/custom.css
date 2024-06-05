@@ -21,10 +21,18 @@
     width: 600px;
 }
 .formItems{
-    width: 50%;
+    width: 670px;
+    height: 970px;
     margin-left: 10px;
-
+    overflow: auto;
 }
+
+/* scrollbar settings */
+.formItems::-webkit-scrollbar {
+  width: 0; 
+  height: 0; 
+}
+
 .optionImg{
     width: 120px;
 }
@@ -109,7 +117,7 @@
   }
   
   .msgBox {
-    width: 100%;
+    width: 300px;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -219,8 +227,8 @@
   
    .name1 {
     position: absolute;
-    top: 211px;
-    left: 23%;
+    top: 208px;
+    left: 23.1%;
     width: 201px;
     margin-left: -100px;
     text-align: center;
@@ -230,7 +238,7 @@
   .name2 {
     position: absolute;
     top: 414px;
-    left: 20%;
+    left: 19.7%;
     width: 200px;
     margin-left: -100px;
     text-align: center;
@@ -241,11 +249,32 @@
   .name3 {
     position: absolute;
     top: 402px;
-    left: 26%;
+    left: 25.5%;
     width: 200px;
     margin-left: -100px;
     text-align: center;
     color: rgb(255, 255, 255);
     transform: rotate(290deg);
   }
-  
+
+  .imgBoxItems{
+    padding: 10px;
+    width: 130px;
+    text-align: center;
+  }
+.selectBand{
+  display: flex;
+  flex-wrap: wrap;
+}
+.imgBoxItems:hover{
+  background-color: #000046;
+  color: white;
+  border-radius:10px;
+}
+.imgBoxItems:active{
+  background-color: #303008;
+}
+.imgBoxItems {
+  background: none;
+  background-color: transparent;
+}
