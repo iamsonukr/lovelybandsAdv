@@ -2,20 +2,20 @@ import React, { useEffect, useState } from 'react';
 import './custom.css'
 
 const Custom = () => {
-  
-    const [name, setName] = useState('Your Name');
-    const [bgColor, setBgColor] = useState('');
-    const [color, setColor] = useState('white');
-    const [font, setFont] = useState('Arial');
-    const [startIcon, setStartIcon] = useState('')
-    const [endIcon, setEndIcon] = useState('')
+
+  const [name, setName] = useState('Your Name');
+  const [bgColor, setBgColor] = useState('');
+  const [color, setColor] = useState('white');
+  const [font, setFont] = useState('Arial');
+  const [startIcon, setStartIcon] = useState('')
+  const [endIcon, setEndIcon] = useState('')
   const [selectedWristband, setSelectedWristband] = useState({ id: 1, image: './lanyard/lanyard1.webp' });
-  useEffect(()=>{
-    if(name.length>14){
+  useEffect(() => {
+    if (name.length > 14) {
       window.alert("Not more than 14 char are allowed")
-      setName(name.slice(0,-1))
+      setName(name.slice(0, -1))
     }
-  },[name])
+  }, [name])
 
   const Custom = [
     { id: 0, image: './lanyard/lanyard0.png', design: 'Custom Red' },
@@ -43,6 +43,14 @@ const Custom = () => {
     setBgColor('#FEFFD2')
 
   };
+
+  const resetHandle = () => {
+    setName('');
+    setFont('')
+    setColor('');
+    setStartIcon('')
+    setEndIcon('')
+  }
 
   return (
     <div>
@@ -78,7 +86,7 @@ const Custom = () => {
             <div className="message-row">
               <div className="msg">
                 <p>Your Message Here</p>
-                <input type="text" className="msgBox" max={1} onChange={(e) => setName(e.target.value)} />
+                <input type="text" className="msgBox" max={1} onChange={(e) => setName(e.target.value)} value={name} />
               </div>
               <div className="select-font">
                 <p>Choose your font .</p>
@@ -106,21 +114,22 @@ const Custom = () => {
                 <p>Imprint Color</p>
                 <select name="" id="" placeholder="select font" onChange={(e) => setColor(e.target.value)} value={color}>
                   <option value="white">White</option>
-                  <option value="#5DEBD7">Green</option>
+                  <option value="mediumturquoise">Green</option>
                   <option value="yellow">Yellow</option>
-                  <option value="#7E8EF1">Aqua</option>
+                  <option value="aqua">Aqua</option>
                   <option value="orange">Orange</option>
-                  <option value="#a1bdf6">Blue</option>
+                  <option value="lightsteelblue">Blue</option>
                   <option value="red">Red</option>
                   <option value="pink">Pink</option>
                   <option value="purple">Purple</option>
                   <option value="brown">Brown</option>
                   <option value="gray">Gray</option>
                   <option value="black">Black</option>
-                  <option value="#FF69B4">Hot Pink</option>
-                  <option value="#8A2BE2">Blue Violet</option>
-                  <option value="#00FF7F">Spring Green</option>
-                  <option value="#FFD700">Gold</option>
+                  <option value="hotpink">Hot Pink</option>
+                  <option value="blueviolet">Blue Violet</option>
+                  <option value="springgreen">Spring Green</option>
+                  <option value="gold">Gold</option>
+
                 </select>
               </div>
             </div>
@@ -129,31 +138,105 @@ const Custom = () => {
               <div className="select-font">
                 <p>Select Start Icon</p>
                 <select name="" id="" placeholder="select font" onChange={(e) => setStartIcon(e.target.value)} value={startIcon}>
-                  <option value="😎">😎</option>
-                  <option value="🐲">🐲</option>
-                  <option value="🎨">🎨</option>
-                  <option value="☀️">☀️</option>
+                  <option value=""></option>
+                  <option value="💎">💎</option>
+                  <option value="🏐">🏐</option>
+                  <option value="⚽">⚽</option>
+                  <option value="🎲">🎲</option>
+                  <option value="♟️">♟️</option>
+                  <option value="🎵">🎵</option>
+                  <option value="⚔️">⚔️</option>
+                  <option value="🛡️">🛡️</option>
+                  <option value="💡">💡</option>
+                  <option value="🪙">🪙</option>
+                  <option value="✒️">✒️</option>
+                  <option value="🍥">🍥</option>
+                  <option value="🍦">🍦</option>
+                  <option value="🧊">🧊</option>
+                  <option value="🍓">🍓</option>
+                  <option value="🌺">🌺</option>
+                  <option value="🌼">🌼</option>
+                  <option value="🌻">🌻</option>
+                  <option value="🍁">🍁</option>
+                  <option value="🍂">🍂</option>
+                  <option value="🏵️">🏵️</option>
+                  <option value="🌷">🌷</option>
+                  <option value="🌍">🌍</option>
+                  <option value="🚩">🚩</option>
+                  <option value="🏳️‍🌈">🏳️‍🌈</option>
+                  <option value="🏳️">🏳️</option>
+                  <option value="♨️">♨️</option>
                   <option value="🌙">🌙</option>
+                  <option value="🌕">🌕</option>
+                  <option value="☀️">☀️</option>
                   <option value="⭐">⭐</option>
+                  <option value="🌈">🌈</option>
                   <option value="⚡">⚡</option>
-                  <option value="☁️">☁️</option>
-                  <option value="🌧️">🌧️</option>
                   <option value="❄️">❄️</option>
+                  <option value="🔥">🔥</option>
+                  <option value="💧">💧</option>
+                  <option value="💥">💥</option>
+                  <option value="💮">💮</option>
+                  <option value="❌">❌</option>
+                  <option value="⚜️">⚜️</option>
+                  <option value="🔰">🔰</option>
+                  <option value="☢️">☢️</option>
+                  <option value="☣️">☣️</option>
+                  <option value="💠">💠</option>
+                  <option value="🌐">🌐</option>
                 </select>
               </div>
               <div className="select-font">
                 <p>Select End Icon</p>
                 <select name="" id="" placeholder="select font" onChange={(e) => setEndIcon(e.target.value)} value={endIcon}>
-                  <option value="😎">😎</option>
-                  <option value="🐲">🐲</option>
-                  <option value="🎨">🎨</option>
-                  <option value="☀️">☀️</option>
+                  <option value=""></option>
+                  <option value="💎">💎</option>
+                  <option value="🏐">🏐</option>
+                  <option value="⚽">⚽</option>
+                  <option value="🎲">🎲</option>
+                  <option value="♟️">♟️</option>
+                  <option value="🎵">🎵</option>
+                  <option value="⚔️">⚔️</option>
+                  <option value="🛡️">🛡️</option>
+                  <option value="💡">💡</option>
+                  <option value="🪙">🪙</option>
+                  <option value="✒️">✒️</option>
+                  <option value="🍥">🍥</option>
+                  <option value="🍦">🍦</option>
+                  <option value="🧊">🧊</option>
+                  <option value="🍓">🍓</option>
+                  <option value="🌺">🌺</option>
+                  <option value="🌼">🌼</option>
+                  <option value="🌻">🌻</option>
+                  <option value="🍁">🍁</option>
+                  <option value="🍂">🍂</option>
+                  <option value="🏵️">🏵️</option>
+                  <option value="🌷">🌷</option>
+                  <option value="🌍">🌍</option>
+                  <option value="🚩">🚩</option>
+                  <option value="🏳️‍🌈">🏳️‍🌈</option>
+                  <option value="🏳️">🏳️</option>
+                  <option value="♨️">♨️</option>
                   <option value="🌙">🌙</option>
+                  <option value="🌍">🌍</option>
+                  <option value="">🌍</option>
+                  <option value="🌕">🌕</option>
+                  <option value="☀️">☀️</option>
                   <option value="⭐">⭐</option>
+                  <option value="🌈">🌈</option>
                   <option value="⚡">⚡</option>
-                  <option value="☁️">☁️</option>
-                  <option value="🌧️">🌧️</option>
                   <option value="❄️">❄️</option>
+                  <option value="🔥">🔥</option>
+                  <option value="💧">💧</option>
+                  <option value="💥">💥</option>
+                  <option value="💮">💮</option>
+                  <option value="❌">❌</option>
+                  <option value="⚜️">⚜️</option>
+                  <option value="🔰">🔰</option>
+                  <option value="☢️">☢️</option>
+                  <option value="☣️">☣️</option>
+                  <option value="💠">💠</option>
+                  <option value="🌐">🌐</option>
                 </select>
 
               </div>
@@ -183,9 +266,16 @@ const Custom = () => {
             <div className="message-row">
               <p>Order Notes</p>
               <br />
-              <textarea name="" id="">
+              <textarea name="" id="" className='noteBox'>
 
               </textarea>
+            </div>
+            <div className="message-row ">
+
+
+              <button name="" id="" className='resetBtn' onClick={resetHandle}>
+                Reset
+              </button>
             </div>
 
           </div>
@@ -306,9 +396,22 @@ const WristbandPreview = ({ selectedWristband, name, color, font, startIcon, end
       {selectedWristband.id == 0 ? (
         <>
           <img src={selectedWristband.image} alt="Selected Wristband" />
-          <p>{color}</p>
-          <p>{font}</p>
-          <p>{startIcon}</p>
+          <div className="infoBox">
+            {name ? <p>Message : <span style={{}} >{" " + name + " "} </span></p> : " "}
+
+
+            {/* {color != 'white' ? <p>Color : <span style={{ color: color }} >{color} </span></p> : <p>Color : <span >{color} </span></p>} */}
+            { (color && color != 'white')  
+            ? <p>Color : <span style={{ color: color }} >{color} </span></p> 
+            : <p>Color : <span >{color} </span></p>}
+
+            
+
+
+            {font ? <p >Font :<span style={{ fontFamily: font }} >{font} </span> </p> : ""}
+            {startIcon ? <p>Start Icon: {startIcon}</p> : ""}
+            {endIcon ? <p>End Icon: {endIcon}</p> : ""}
+          </div>
           <p className='name1' style={{ color: color, fontFamily: font }} >{startIcon}{' ' + name + ' '}{endIcon}</p>
           <p className='name2' style={{ color: color, fontFamily: font }}>{startIcon}{' ' + name + ' '}{endIcon}</p>
           <p className='name3' style={{ color: color, fontFamily: font }}>{startIcon}{' ' + name + ' '}{endIcon}</p>
